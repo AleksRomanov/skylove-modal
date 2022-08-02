@@ -4,11 +4,6 @@
         v-if="isPopupVisible"
         @closePopup="closePopup"
     >
-      <p>Добавить отзыв</p>
-      <div class="v-popup__rating">
-        <p>Рейтинг</p>
-
-      </div>
     </Popup>
     <h1>Main page</h1>
     <button class="v-popup__showPopup"
@@ -20,8 +15,8 @@
 </template>
 
 <script>
-import Main from '@/components/v-main.vue'
-import Popup from '@/components/v-popup.vue'
+import Main from '@/components/Main.vue'
+import Popup from '@/components/Popup.vue'
 
 export default {
   name: 'Main',
@@ -58,10 +53,4 @@ h1 {
   flex-wrap: wrap;
 }
 
-.v-popup__rating {
-  width: 200px;
-  min-height: 50px;
-  background: #ffffff;
-  box-shadow: 0 0 17px 0 #2c3e50;
-}
 </style>
