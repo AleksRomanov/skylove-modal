@@ -1,16 +1,13 @@
 <template>
   <div class="v-popup">
-    <div class="v-popup__header">
-      <span>App Popup</span>
-      <span>
-        <i class="material-icons">close</i>
-      </span>
-    </div>
+<!--    <div class="v-popup__close">-->
+      <i class="material-icons" @click="closePopup">close</i>
+<!--    </div>-->
     <div class="v-popup__content">
       <slot></slot>
     </div>
     <div class="v-popup__footer">
-      <button>Close</button>
+      <button @click="closePopup">Close</button>
     </div>
   </div>
 </template>
@@ -22,24 +19,28 @@ export default {
   data() {
     return {}
   },
-  computed: {}
+  methods: {
+    closePopup() {
+      this.$emit('closePopup')
+    }
+  }
 }
 </script>
 
 <style lang="scss">
 .v-popup {
+  z-index: 10;
   padding: 16px;
+  position: fixed;
+  top: 50px;
+  //margin: 0 auto;
+  width: 400px;
+  background: #ffffff;
+  box-shadow: 0 0 17px 0 #2c3e50;
 
-  &__header, &__footer {
+  & i {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
   }
 }
 </style>

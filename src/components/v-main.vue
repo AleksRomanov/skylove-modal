@@ -16,7 +16,5 @@ export default {
 </script>
 
 <style lang="scss">
-.v-main {
-  padding: 16px;
-}
+
 </style>
