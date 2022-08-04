@@ -1,14 +1,10 @@
 <template>
   <div class="v-main">
-    <Popup
-        v-if="isPopupVisible"
-        @closePopup="closePopup"
+    <Popup v-if="isPopupVisible" @closePopup="closePopup"
     >
     </Popup>
     <h1>Main page</h1>
-    <button class="v-popup__showPopup"
-            @click="showPopup"
-    >
+    <button class="v-popup__showPopup" @click="showPopup">
       Show Popup Window
     </button>
   </div>
